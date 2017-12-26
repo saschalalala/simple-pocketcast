@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+  <head>
+    <title>Pocketcasts</title>
+    <style>
+      body {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <webview id="pocketcasts" src="https://play.pocketcasts.com" style="width: 100vw; height: 100vh;">
+    </webview>
+    <script>
+        const {ipcRenderer} = require('electron')
+        ipcRenderer.on('play-pause', (event, arg) => {
+          const webview = document.querySelector('webview')
+          webview.executeJavaScript("$('.play_pause_button')[0].click()")
+        })
+  
+        ipcRenderer.on('forward', (event, arg) => {
+          const webview = document.querySelector('webview')
+          webview.executeJavaScript("$('.skip_forward_button')[0].click()")
+        })
+  
+        ipcRenderer.on('backward', (event, arg) => {
+          const webview = document.querySelector('webview')
+          webview.executeJavaScript("$('.skip_back_button')[0].click()")
+        })
+      </script>
+  </body>
+</html>

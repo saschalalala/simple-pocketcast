@@ -1,0 +1,18 @@
+{
+  "name": "simple-pocketcast",
+  "version": "1.0.0",
+  "description": "Simple wrapper around the pocketcasts web application",
+  "main": "index.js",
+  "author": "Sascha",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "electron": "^1.7.10"
+  },
+  "devDependencies": {
+    "standard": "^10.0.3"
+  }
+}
