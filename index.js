@@ -1,5 +1,6 @@
 const electron = require('electron')
 const path = require('path')
+const menu = require('./menu')
 
 const {app, BrowserWindow, globalShortcut} = electron
 
@@ -23,7 +24,7 @@ function createWindow () {
     height: 780
   })
   mainWindow.loadURL(path.join('file://', __dirname, 'index.html'))
-  require('./menu')
+  menu.createMenu()
   // mainWindow.openDevTools({ mode: 'bottom' })
 }
 
