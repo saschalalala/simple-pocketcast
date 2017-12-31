@@ -23,6 +23,7 @@ function createWindow () {
     height: 780
   })
   mainWindow.loadURL(path.join('file://', __dirname, 'index.html'))
+  require('./menu')
   // mainWindow.openDevTools({ mode: 'bottom' })
 }
 

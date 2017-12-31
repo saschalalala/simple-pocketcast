@@ -1,6 +1,6 @@
 {
   "name": "simple-pocketcast",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple wrapper around the pocketcasts web application",
   "main": "index.js",
   "author": "Sascha",
